@@ -142,7 +142,7 @@ body {
 .current::after {
   position: absolute;
   display: block;
-  bottom: 0;
+  bottom: -1px;
   content: " ";
   width: 100%;
   height: 4px;
@@ -191,6 +191,9 @@ body {
 .header-container {
   display: flex;
   align-items: center;
+}
+
+.header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -927,9 +930,6 @@ body {
   display: flex;
   position: relative;
   margin-bottom: 10px;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-item:hover,
@@ -965,12 +965,21 @@ body {
   border-color: var(--accent-color);
 }
 
+.modal-input:hover + .modal-form-icon,
+.modal-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+
 .modal-form-icon {
   position: absolute;
   left: 15px;
   top: 50%;
   margin: 0;
+  padding: auto;
   transform: translateY(-50%);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-check {
@@ -1005,23 +1014,25 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-checkbox {
-  visibility: hidden;
-}
-
 .modal-form-check {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   border: 2px solid var(--title-color);
   border-radius: 2px;
   fill: var(--white-color);
-  transition-property: background-color;
+  transition-property: background-color border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-check:hover,
-.modal-form-check:focus {
-  border: transparent;
+.form-checkbox:checked + .form-agree span {
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
+}
+
+.form-checkbox:focus + .form-agree span {
+  border-color: var(--accent-color);
 }
 
 .form-agree {
@@ -1030,7 +1041,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin-left: 23px;
+  margin-left: 45px;
 }
 
 .form-contract {
@@ -1058,7 +1069,7 @@ body {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
-  margin-top: 20px;
+  margin-top: 30px;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

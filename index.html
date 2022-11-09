@@ -552,12 +552,21 @@
               class="modal-comment"
             ></textarea>
             <span class="form-item">
-              <input type="checkbox" name="agree" class="form-checkbox" />
-              <svg class="modal-form-check" width="16" height="15">
-                <use href="./images/symbol-defs.svg#icon-agree"></use>
-              </svg>
-              <p class="form-agree">Погоджуюся з розсилкою та приймаю</p>
-              <a href="#" class="form-contract">Умови договору</a>
+              <input
+                type="checkbox"
+                id="check"
+                name="agree"
+                class="form-checkbox visually-hidden"
+              />
+              <label for="check" class="form-agree">
+                <span class="modal-form-check">
+                  <svg width="16" height="15">
+                    <use href="./images/symbol-defs.svg#icon-agree"></use>
+                  </svg>
+                </span>
+                Погоджуюся з розсилкою та приймаю
+                <a href="#" class="form-contract">Умови договору</a>
+              </label>
             </span>
             <button type="submit" class="modal-form-button">Відправити</button>
           </form>
