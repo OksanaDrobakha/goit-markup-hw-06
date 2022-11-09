@@ -655,19 +655,27 @@
           </ul>
         </div>
         <div class="footer-send">
+          <p class="subscribe">Підпишіться на розсилку</p>
           <form class="footer-form">
-            <label for="send">Підпишіться на розсилку</label>
-            <input type="text" name="send" id="send" placeholder="E-mail" />
+            <label for="send">
+              <input
+                type="text"
+                name="send"
+                id="send"
+                placeholder="E-mail"
+                class="footer-input"
+              />
+            </label>
+            <button type="submit" class="footer-button">
+              Підписатися
+              <svg viewBox="0 0 32 32" class="" width="24" height="24">
+                <use
+                  href="./images/symbol-defs.svg#icon-telegram"
+                  class="footer-button-icon"
+                ></use>
+              </svg>
+            </button>
           </form>
-          <button type="button" class="footer-button">
-            Підписатися
-            <svg viewBox="0 0 32 32" class="" width="24" height="24">
-              <use
-                href="./images/symbol-defs.svg#icon-telegram"
-                class="footer-button-icon"
-              ></use>
-            </svg>
-          </button>
         </div>
       </div>
     </footer>

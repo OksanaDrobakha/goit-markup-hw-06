@@ -325,14 +325,17 @@ body {
 }
 
 .footer-send {
-  display: flex;
   margin-left: 93px;
   align-items: flex-end;
 }
 
 .footer-form {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.footer-input {
+  color: var(--white-color);
   width: 358px;
 }
 
@@ -342,8 +345,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--white-color);
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-form input {
