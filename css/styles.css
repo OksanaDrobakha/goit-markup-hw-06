@@ -939,6 +939,11 @@ body {
   fill: var(--accent-color);
 }
 
+.form-item-agree {
+  display: flex;
+  position: relative;
+}
+
 .modal-label {
   display: block;
   font-family: inherit;
@@ -986,6 +991,8 @@ body {
 
 .modal-form-check {
   position: absolute;
+  width: 16px;
+  height: 15px;
   left: 15px;
   top: 50%;
   margin: 0;
@@ -1023,7 +1030,7 @@ body {
   border: 2px solid var(--title-color);
   border-radius: 2px;
   fill: var(--white-color);
-  transition-property: background-color border-color;
+  transition-property: background-color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1043,7 +1050,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin-left: 45px;
+  margin-left: 40px;
 }
 
 .form-contract {
